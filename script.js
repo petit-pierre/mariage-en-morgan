@@ -36,7 +36,7 @@ leftArrow.addEventListener("click", () => {
   document.querySelector(".dot_selected").classList.remove("dot_selected");
   document.querySelector(".d" + selected).classList.add("dot_selected");
   document.querySelector(".banner-img").src =
-    "./photos_voiture/gallery/" + slides[selected].image;
+    "./photos_voiture/slider/" + slides[selected].image;
   text.innerHTML = slides[selected].tagLine;
 });
 
@@ -50,7 +50,7 @@ rightArrow.addEventListener("click", () => {
   document.querySelector(".dot_selected").classList.remove("dot_selected");
   document.querySelector(".d" + selected).classList.add("dot_selected");
   document.querySelector(".banner-img").src =
-    "./photos_voiture/gallery/" + slides[selected].image;
+    "./photos_voiture/slider/" + slides[selected].image;
   text.innerHTML = slides[selected].tagLine;
 });
 
