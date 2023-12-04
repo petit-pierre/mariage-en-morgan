@@ -1,0 +1,15 @@
+
+	{
+		"id": "01",
+		"title": "images slider",
+		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
+		"pictures": [
+			"./photos_voiture/slider/pic01.jpg",
+			"./photos_voiture/slider/pic02.jpg",
+			"./photos_voiture/slider/pic03.jpg",
+			"./photos_voiture/slider/pic04.jpg",
+			"./photos_voiture/slider/pic05.jpg",
+			"./photos_voiture/slider/pic06.jpg",
+			"./photos_voiture/slider/pic07.jpg"
+		]
+	}
