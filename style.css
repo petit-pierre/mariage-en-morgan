@@ -1,0 +1,354 @@
+@charset "UTF-8";
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+.paragraphe {
+  text-indent: 22px;
+}
+
+:root {
+  --main-color: rgb(248, 249, 234);
+  --main-bg-color: rgb(248, 249, 234);
+  --filter-bg-color: #DEEBFF;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(248, 249, 234);
+}
+
+.main-container {
+  width: 100%;
+  max-width: 14400px;
+  box-sizing: border-box;
+}
+
+header {
+  /*border: 2px solid;*/
+  border-radius: 10px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
+  position: sticky;
+  top: 0;
+  /*position: fixed;*/
+  align-items: center;
+}
+
+.navlogo {
+  width: 30%;
+  padding-top: 10%;
+}
+
+.navlogo :hover {
+  filter: invert(60%);
+}
+
+.intro {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.img {
+  width: 100%;
+}
+
+.photoVoiture {
+  border-radius: 10px;
+  max-width: 49%;
+  min-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767.98px) {
+  .photoVoiture {
+    max-width: 100%;
+  }
+}
+
+.liens {
+  border-radius: 10px;
+  width: 12%;
+}
+
+.photo {
+  width: 60%;
+  padding: 2%;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.firstPic {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.corp {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.corp__photo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.All {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  gap: 1%;
+  width: 100%;
+}
+
+.texte {
+  width: 40%;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.enTete {
+  width: 40%;
+}
+
+.moustaches {
+  display: flex;
+  justify-content: center;
+}
+
+.historiqueStrong {
+  text-align: center;
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  margin-left: 0%;
+  margin-top: 10px;
+  padding: 5px;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+footer p {
+  margin: 5px;
+}
+
+.enHaut {
+  display: flex;
+  justify-content: center;
+}
+
+.lienFacebook {
+  width: 30%;
+  margin-top: 100%;
+}
+
+.logoFacebook {
+  width: 100%;
+}
+
+.lienFacebook :hover {
+  filter: invert(60%);
+}
+
+.slide {
+  margin: 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+}
+
+.photoVoiture__slider {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.texte__photo {
+  width: 100%;
+}
+
+.contact {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.photo__photo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .photo__photo {
+    flex-direction: column;
+  }
+}
+
+.photoVoiture2 {
+  width: 32%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .photoVoiture2 {
+    width: 100%;
+  }
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  resize: none;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  border-style: none;
+  border: 2px solid;
+  padding: 10px;
+  margin-right: none;
+}
+
+.input :hover {
+  background-color: white;
+}
+
+.input :active {
+  background-color: black;
+  color: white;
+}
+
+::-moz-placeholder {
+  text-align: center;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.telAndMail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+.telAndMail input {
+  width: 45%;
+  background-color: white;
+}
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 470px;
+  position: relative;
+}
+
+.banner-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+/* Gestion des fleches du carrousel */
+#banner .arrow {
+  position: absolute;
+}
+
+#banner .arrow_left {
+  left: 10px;
+}
+
+#banner .arrow_right {
+  right: 10px;
+}
+
+/* Gestion des points du carrousel */
+.dots {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+}
+
+.dot {
+  margin-inline: 5px;
+  width: 13px;
+  height: 13px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dot_selected {
+  background-color: #fff;
+}
+
+.lienFooter {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 767.98px) {
+  .navlogo {
+    width: 80%;
+  }
+  .photoVoiture__slider {
+    height: 200px;
+  }
+  .corp {
+    flex-direction: column;
+  }
+  .texte {
+    width: 100%;
+  }
+  .photo {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
