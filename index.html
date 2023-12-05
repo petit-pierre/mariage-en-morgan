@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <script src="./script.js" defer></script>
+    <script src="./smtp.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariage en Morgan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,14 +85,14 @@
                   <form>
                       <h1>Contact</h1>
                       <div class="telAndMail">
-                          <input type="email" placeholder="e-mail">
-                          <input type="tel" placeholder="telephone">
+                          <input type="email" class="email" placeholder="e-mail">
+                          <input type="tel" class="tel" placeholder="telephone">
                       </div>
                       <div>
-                          <textarea placeholder="Contactez moi et n'oubliez pas de me laisser votre nom et e-mail (ou telephone) afin que je puisse vous repondre ."></textarea>
+                          <textarea class="message" placeholder="Contactez moi et n'oubliez pas de me laisser votre nom et e-mail (ou telephone) afin que je puisse vous repondre ."></textarea>
                       </div>
                       <div class="input">
-                          <input type="submit" value="Envoyer le formulaire">
+                          <input type="submit" class="send" value="Envoyer le formulaire">
                       </div>
                   </form>
               </div>
