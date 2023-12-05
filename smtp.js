@@ -43,19 +43,40 @@ var Email = {
 send = document.querySelector(".send");
 send.addEventListener("click", (e) => {
   e.preventDefault();
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "aubree.pierre2@gmail.com",
-    Password: "98CF43CAAA79FD01D7FB08752FD07AE78C4D",
-    To: "contact@petitpierre.net",
-    From: "aubree.pierre2@gmail.com",
-    Subject: "Site mariage-en-morgan",
-    Body:
-      "email : " +
-      document.querySelector(".email").value +
-      " tel : " +
-      document.querySelector(".tel").value +
-      " message : " +
-      document.querySelector(".message").value,
-  }).then((message) => alert(message));
+  let emailRegExp = new RegExp("[a-z0-9._-]+@[a-z0-9._-]+\\.[a-z0-9._-]+");
+  let telRegExp = new RegExp("(0|\\+33|0033)[1-9][0-9]{8}");
+  let email = document.querySelector(".email");
+  let error = document.querySelector(".error");
+  let tel = document.querySelector(".tel");
+  let contenu = document.querySelector(".message");
+  let conteneur = contenu.value;
+  if (emailRegExp.test(email.value) || telRegExp.test(tel.value)) {
+    if (contenu.value.length > 5) {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "aubree.pierre2@gmail.com",
+        Password: "98CF43CAAA79FD01D7FB08752FD07AE78C4D",
+        To: "contact@petitpierre.net",
+        From: "aubree.pierre2@gmail.com",
+        Subject: "Site mariage-en-morgan",
+        Body:
+          "email : " +
+          document.querySelector(".email").value +
+          " tel : " +
+          document.querySelector(".tel").value +
+          " message : " +
+          document.querySelector(".message").value,
+      }).then(
+        (message) =>
+          (error.innerText =
+            "Message envoyé, je vous repondrai bientot . Merci .")
+      );
+    } else {
+      console.log(contenu.value.length);
+      error.innerText = "Votre message doit faire plus de 5 caracteres .";
+    }
+  } else {
+    error.innerText =
+      "Pour envoyer un message il faut renseigner un e-mail et/ou un numero de telephone valide .";
+  }
 });

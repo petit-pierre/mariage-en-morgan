@@ -3,6 +3,11 @@
   font-family: "Raleway", sans-serif;
 }
 
+.error {
+  color: red;
+  text-align: center;
+}
+
 .paragraphe {
   text-indent: 22px;
 }
