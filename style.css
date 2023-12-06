@@ -14,6 +14,11 @@
   cursor: pointer;
   width: 2%;
 }
+@media (max-width: 767.98px) {
+  .cross {
+    width: 5%;
+  }
+}
 
 .modale {
   position: fixed;
@@ -22,6 +27,7 @@
   background-color: white;
   border-radius: 10px;
   text-align: center;
+  margin-left: -10px;
 }
 
 .photoModal {
@@ -29,6 +35,12 @@
   max-height: 500px;
   margin: 5%;
   border-radius: 10px;
+}
+@media (max-width: 767.98px) {
+  .photoModal {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .hidden {
