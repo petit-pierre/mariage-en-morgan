@@ -113,7 +113,7 @@ nav {
 
 .All {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   margin-top: 10px;
   gap: 1%;
   width: 100%;
