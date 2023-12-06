@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
     <script src="./smtp.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+
     <link rel="icon" type="image/png" href="./logos/car.png">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -20,6 +21,11 @@
     <title>Mariage en Morgan</title>
   </head>
   <body>
+    <div class="modale hidden">
+        <img class="cross" src="./logos/Cross.png">
+        <img class="photoModal" src="./photos_voiture/acceuil/pic1.jpg">
+    </div>
+    <div class="body">
     <div class="main-container">
         <div id="banner">
             <img class="banner-img b0" src="./photos_voiture/slider/pic01.jpg" alt="Banner Print-it">
@@ -65,10 +71,10 @@
                       <p>Antoine reste à votre disposition pour plus de détails en vous proposant une prestation à la carte (décoration, fleurissement et tenue du chauffeur ...) .</p>
                   </section>
                   <section class="photo">
-                      <img class="photoVoiture" src="./photos_voiture/acceuil/pic1.jpg">
-                      <img class="photoVoiture" src="./photos_voiture/acceuil/pic2.jpg">
-                      <img class="photoVoiture" src="./photos_voiture/acceuil/pic3.jpg">
-                      <img class="photoVoiture" src="./photos_voiture/acceuil/pic4.jpg">
+                      <img class="photoVoiture photo0" src="./photos_voiture/acceuil/pic1.jpg">
+                      <img class="photoVoiture photo1" src="./photos_voiture/acceuil/pic2.jpg">
+                      <img class="photoVoiture photo2" src="./photos_voiture/acceuil/pic3.jpg">
+                      <img class="photoVoiture photo3" src="./photos_voiture/acceuil/pic4.jpg">
                   </section>
               </div>
               <div class="corp__photo" id="photo">
@@ -81,17 +87,17 @@
                       <p class="historiqueStrong"></p>
                       <p>C’est une voiture qui comprend une structure en bois de frêne et des panneaux de carrosserie en alu comportant des châssis en alu ou en acier pour être plus solide La voiture Morgan est fabriquée à la main Morgan Motor Company continue de produire ses véhicules d'exception dans la pure tradition britannique. </p>
                       <p>Morgan continue de façonner des voitures de sport et de prestige .</p>
-                      <img src="./photos_voiture/gallery/pic01.jpg" class="firstPic">
+                      <img src="./photos_voiture/gallery/pic01.jpg" class="firstPic photo10">
                   </section>
                   <section class="photo__photo">
-                      <img class="photoVoiture2" src="./photos_voiture/gallery/pic02.jpg">
-                      <img class="photoVoiture2" src="./photos_voiture/gallery/pic03.jpg">
-                      <img class="photoVoiture2" src="./photos_voiture/gallery/pic04.jpg">
+                      <img class="photoVoiture2 photo4" src="./photos_voiture/gallery/pic02.jpg">
+                      <img class="photoVoiture2 photo5" src="./photos_voiture/gallery/pic03.jpg">
+                      <img class="photoVoiture2 photo6" src="./photos_voiture/gallery/pic04.jpg">
                   </section>
                   <section class="photo__photo">
-                      <img class="photoVoiture2" src="./photos_voiture/gallery/pic05.jpg">
-                      <img class="photoVoiture2" src="./photos_voiture/gallery/pic06.jpg">
-                      <img class="photoVoiture2" src="./photos_voiture/gallery/pic07.jpg">
+                      <img class="photoVoiture2 photo7" src="./photos_voiture/gallery/pic05.jpg">
+                      <img class="photoVoiture2 photo8" src="./photos_voiture/gallery/pic06.jpg">
+                      <img class="photoVoiture2 photo9" src="./photos_voiture/gallery/pic07.jpg">
                   </section>
               </div>
               <div class="contact" id="contact">
@@ -118,7 +124,8 @@
                   <a href="https://www.linkedin.com/in/pierre-aubr%C3%A9e-441073b0/" target="_blank" class="lienFooter"><p>© : petitpierre</p></a>
               </footer>
           </div>
-      </div> 
+      </div>
+    </div> 
   </div>
   </body>
 </html>

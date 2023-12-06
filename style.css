@@ -3,6 +3,38 @@
   font-family: "Raleway", sans-serif;
 }
 
+.grey {
+  opacity: 0.1;
+}
+
+.cross {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  width: 2%;
+}
+
+.modale {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.photoModal {
+  max-width: 90%;
+  max-height: 500px;
+  margin: 5%;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
 .error {
   color: red;
   text-align: center;
@@ -18,9 +50,13 @@
   --filter-bg-color: #DEEBFF;
 }
 
-body {
+.body {
+  position: relative;
   display: flex;
   justify-content: center;
+}
+
+body {
   background-color: rgb(248, 249, 234);
 }
 
@@ -140,6 +176,7 @@ nav {
 }
 
 footer {
+  box-sizing: border-box;
   display: flex;
   width: 100%;
   margin-left: 0%;
@@ -228,6 +265,7 @@ h1 {
 }
 
 textarea {
+  box-sizing: border-box;
   width: 100%;
   height: 300px;
   resize: none;
@@ -295,7 +333,7 @@ input {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -2;
+  z-index: 0;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -312,10 +350,12 @@ input {
 
 #banner .arrow_left {
   left: 10px;
+  z-index: 4;
 }
 
 #banner .arrow_right {
   right: 10px;
+  z-index: 4;
 }
 
 /* Gestion des points du carrousel */
@@ -323,6 +363,7 @@ input {
   position: absolute;
   bottom: 40px;
   display: flex;
+  z-index: 4;
 }
 
 .dot {
