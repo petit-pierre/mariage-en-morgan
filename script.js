@@ -26,6 +26,9 @@ const dots = document.querySelector(".dots");
 let selected = 0;
 const text = document.querySelector(".text");
 
+document.querySelector(".b0").style.transform = "translatex(0%)";
+document.querySelector(".b0").style.zIndex = "-1";
+
 const leftArrow = document.querySelector(".arrow_left");
 leftArrow.addEventListener("click", () => {
   console.log("j'ai cliqué a gauche");
@@ -35,9 +38,19 @@ leftArrow.addEventListener("click", () => {
   }
   document.querySelector(".dot_selected").classList.remove("dot_selected");
   document.querySelector(".d" + selected).classList.add("dot_selected");
-  document.querySelector(".banner-img").src =
-    "./photos_voiture/slider/" + slides[selected].image;
-  text.innerHTML = slides[selected].tagLine;
+  for (i = 0; i < 7; i++) {
+    if (i < selected) {
+      document.querySelector(".b" + i).style.transform = "translatex(+100%)";
+      document.querySelector(".b" + i).style.zIndex = "-2";
+    }
+    if (i > selected) {
+      document.querySelector(".b" + i).style.transform = "translatex(-100%)";
+      document.querySelector(".b" + i).style.zIndex = "-2";
+    }
+  }
+
+  document.querySelector(".b" + selected).style.transform = "translatex(0%)";
+  document.querySelector(".b" + selected).style.zIndex = "-1";
 });
 
 const rightArrow = document.querySelector(".arrow_right");
@@ -49,9 +62,19 @@ rightArrow.addEventListener("click", () => {
   }
   document.querySelector(".dot_selected").classList.remove("dot_selected");
   document.querySelector(".d" + selected).classList.add("dot_selected");
-  document.querySelector(".banner-img").src =
-    "./photos_voiture/slider/" + slides[selected].image;
-  text.innerHTML = slides[selected].tagLine;
+  for (i = 0; i < 7; i++) {
+    if (i < selected) {
+      document.querySelector(".b" + i).style.transform = "translatex(+100%)";
+      document.querySelector(".b" + i).style.zIndex = "-2";
+    }
+    if (i > selected) {
+      document.querySelector(".b" + i).style.transform = "translatex(-100%)";
+      document.querySelector(".b" + i).style.zIndex = "-2";
+    }
+  }
+
+  document.querySelector(".b" + selected).style.transform = "translatex(0%)";
+  document.querySelector(".b" + selected).style.zIndex = "-1";
 });
 
 for (let i = 0; i < slides.length; i++) {

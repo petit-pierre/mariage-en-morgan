@@ -287,6 +287,8 @@ input {
   width: 100%;
   min-height: 470px;
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .banner-img {
@@ -298,6 +300,8 @@ input {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  transition: all 1000ms;
+  transform: translatex(100%);
 }
 
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */

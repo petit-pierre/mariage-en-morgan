@@ -279,6 +279,8 @@ input {
 	width: 100%;
 	min-height: 470px;
 	position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .banner-img {
 	position: absolute;
@@ -287,6 +289,29 @@ input {
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
+    transition: all 1000ms;
+    transform: translatex(+100%);
+}
+.b0 {
+
+}
+.b1 {
+
+}
+.b2 {
+
+}
+.b3 {
+
+}
+.b4 {
+
+}
+.b5 {
+
+}
+.b6 {
+
 }
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
