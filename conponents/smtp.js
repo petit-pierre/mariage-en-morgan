@@ -53,9 +53,9 @@ send.addEventListener("click", (e) => {
   if (emailRegExp.test(email.value) || telRegExp.test(tel.value)) {
     if (contenu.value.length > 5) {
       Email.send({
-        SecureToken: "daa97661-9c0d-42df-b389-0287755e8a3b",
+        SecureToken: "05a438b4-7517-4e7a-b0ed-133a878decca",
         To: "contact@mariage-en-morgan.fr",
-        From: "aubree.pierre2@gmail.com",
+        From: "contact@mariage-en-morgan.fr",
         Subject: "Site mariage-en-morgan",
         Body:
           "email : " +
