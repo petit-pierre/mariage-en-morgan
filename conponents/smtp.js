@@ -53,9 +53,7 @@ send.addEventListener("click", (e) => {
   if (emailRegExp.test(email.value) || telRegExp.test(tel.value)) {
     if (contenu.value.length > 5) {
       Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "aubree.pierre2@gmail.com",
-        Password: "98CF43CAAA79FD01D7FB08752FD07AE78C4D",
+        SecureToken: "daa97661-9c0d-42df-b389-0287755e8a3b",
         To: "contact@mariage-en-morgan.fr",
         From: "aubree.pierre2@gmail.com",
         Subject: "Site mariage-en-morgan",
