@@ -56,7 +56,7 @@ send.addEventListener("click", (e) => {
         Host: "smtp.elasticemail.com",
         Username: "aubree.pierre2@gmail.com",
         Password: "98CF43CAAA79FD01D7FB08752FD07AE78C4D",
-        To: "contact@petitpierre.net",
+        To: "contact@mariage-en-morgan.fr",
         From: "aubree.pierre2@gmail.com",
         Subject: "Site mariage-en-morgan",
         Body:
