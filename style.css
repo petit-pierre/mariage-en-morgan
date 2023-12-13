@@ -268,12 +268,26 @@ h1 {
   width: 32%;
   margin-bottom: 10px;
   border-radius: 10px;
+  max-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
   cursor: pointer;
 }
 @media (max-width: 767.98px) {
   .photoVoiture2 {
     width: 100%;
   }
+}
+
+.video {
+  border-radius: 10px;
+  max-width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#video {
+  text-align: center;
 }
 
 textarea {
