@@ -67,14 +67,14 @@ send.addEventListener("click", (e) => {
       }).then(
         (message) =>
           (error.innerText =
-            "Message envoyé, je vous repondrai bientot . Merci .")
+            "Message envoyé, je vous répondrai bientot. Merci.")
       );
     } else {
       console.log(contenu.value.length);
-      error.innerText = "Votre message doit faire plus de 5 caracteres .";
+      error.innerText = "Votre message doit faire plus de 5 caractères.";
     }
   } else {
     error.innerText =
-      "Pour envoyer un message il faut renseigner un e-mail et/ou un numero de telephone valide .";
+      "Pour envoyer un message il faut renseigner un e-mail et/ou un numéro de téléphone valide.";
   }
 });
