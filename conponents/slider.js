@@ -46,8 +46,21 @@ const text = document.querySelector(".text");
 document.querySelector(".b0").style.transform = "translatex(0%)";
 document.querySelector(".b0").style.zIndex = "1";
 
-document.getElementById("banner").addEventListener("swipe", (event) => {
-  console.log("mon event : " + event);
+let touchstartX = 0;
+let touchendX = 0;
+
+function checkDirection() {
+  if (touchendX < touchstartX) document.querySelector(".arrow_right").click();
+  if (touchendX > touchstartX) document.querySelector(".arrow_left").click();
+}
+
+document.getElementById("banner").addEventListener("touchstart", (e) => {
+  touchstartX = e.changedTouches[0].screenX;
+});
+
+document.getElementById("banner").addEventListener("touchend", (e) => {
+  touchendX = e.changedTouches[0].screenX;
+  checkDirection();
 });
 let leftArrow = document.querySelector(".arrow_left");
 leftArrow.addEventListener("click", () => {
