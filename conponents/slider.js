@@ -46,6 +46,9 @@ const text = document.querySelector(".text");
 document.querySelector(".b0").style.transform = "translatex(0%)";
 document.querySelector(".b0").style.zIndex = "1";
 
+document.getElementById("banner").addEventListener("swipe", (event) => {
+  console.log("mon event : " + event);
+});
 let leftArrow = document.querySelector(".arrow_left");
 leftArrow.addEventListener("click", () => {
   if (cooldown === false) {
