@@ -1,8 +1,8 @@
-for (i = 0; i < 11; i++) {
+for (i = 0; i < 14; i++) {
   photo[i] = document.querySelector(".photo" + [i]);
 
   photo[i].addEventListener("click", (e) => {
-    console.log(e.target.src);
+    //console.log(e.target.src);
     document.querySelector(".body").classList.add("grey");
     document.querySelector(".modale").classList.remove("hidden");
     document.querySelector(".photoModal").src = e.target.src;

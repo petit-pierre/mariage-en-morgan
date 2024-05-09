@@ -1,0 +1,36 @@
+# BEGIN iThemes Security - Ne modifiez pas ou ne supprimez pas cette ligne
+# iThemes Security Config Details: 2
+# Bloque rapidement une IP. Sera mis à jour lors du prochain enregistrement des règles formelles.
+SetEnvIF REMOTE_ADDR "^109\.81\.208\.10$" DenyAccess
+SetEnvIF X-FORWARDED-FOR "^109\.81\.208\.10$" DenyAccess
+SetEnvIF X-CLUSTER-CLIENT-IP "^109\.81\.208\.10$" DenyAccess
+<IfModule mod_authz_core.c>
+	<RequireAll>
+		Require all granted
+		Require not env DenyAccess
+		Require not ip 109.81.208.10
+	</RequireAll>
+</IfModule>
+<IfModule !mod_authz_core.c>
+	Order allow,deny
+	Allow from all
+	Deny from env=DenyAccess
+	Deny from 109.81.208.10
+</IfModule>
+# END iThemes Security - Ne modifiez pas ou ne supprimez pas cette ligne
+
+# BEGIN WordPress
+# Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
+# dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.
+# Toute modification des directives situées entre ces marqueurs sera surchargée.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
