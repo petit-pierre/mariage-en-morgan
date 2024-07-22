@@ -143,6 +143,11 @@ nav {
     border-radius: 10px;
     margin-bottom: 20px;
     cursor: pointer;
+
+}
+
+.pictureContainer{
+    position: relative;
 }
 
 .corp {
@@ -415,7 +420,7 @@ input {
 	background-color: #ffffff00;
 	border: 3px solid #fff;
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dot_selected {
 	background-color: #fff;
@@ -446,4 +451,49 @@ input {
     .photo {
         width: 100%;
     }
+}
+
+.connexion{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20dvh;
+    width: 100%;
+    *{
+        margin: auto;
+    }
+    button{
+        margin-top: 20px;
+        width: 200px;
+        height: 40px;
+        background-color: antiquewhite;
+        border-radius: 10px;
+        border: solid 2px black;
+        cursor: pointer;
+        box-shadow: 1px 2px 5px black;
+    }
+    button:hover{
+        box-shadow: 6px 8px 5px black; 
+        transition: 1s;
+    }
+    .logError{
+        color: red;
+        margin-top: 10px;
+    }
+}
+.plume{
+    position: absolute;
+    z-index: 10;
+    filter: invert(1);
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.534);;
+    border-radius: 10px;
+    border: solid 3px black;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.plume:hover{
+    width: 54px;
+    box-shadow: 2px 6px 2px white; 
+    transition: 1s;
 }

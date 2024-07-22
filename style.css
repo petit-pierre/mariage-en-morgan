@@ -147,6 +147,10 @@ nav {
   cursor: pointer;
 }
 
+.pictureContainer {
+  position: relative;
+}
+
 .corp {
   display: flex;
   flex-direction: row;
@@ -434,4 +438,50 @@ input {
   .photo {
     width: 100%;
   }
+}
+.connexion {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20dvh;
+  width: 100%;
+}
+.connexion * {
+  margin: auto;
+}
+.connexion button {
+  margin-top: 20px;
+  width: 200px;
+  height: 40px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  border: solid 2px black;
+  cursor: pointer;
+  box-shadow: 1px 2px 5px black;
+}
+.connexion button:hover {
+  box-shadow: 6px 8px 5px black;
+  transition: 1s;
+}
+.connexion .logError {
+  color: red;
+  margin-top: 10px;
+}
+
+.plume {
+  position: absolute;
+  z-index: 10;
+  filter: invert(1);
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.534);
+  border-radius: 10px;
+  border: solid 3px black;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.plume:hover {
+  width: 54px;
+  box-shadow: 2px 6px 2px white;
+  transition: 1s;
 }/*# sourceMappingURL=style.css.map */
