@@ -4,6 +4,6 @@ async function getItems() {
   });
 
   let result = await response.json();
-  console.log(result);
+  //console.log(result);
 }
 getItems();

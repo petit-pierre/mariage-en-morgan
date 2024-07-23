@@ -13,3 +13,7 @@ document.querySelector(".cross").addEventListener("click", () => {
   document.querySelector(".body").classList.remove("grey");
   document.querySelector(".modale").classList.add("hidden");
 });
+
+document.querySelector(".sliderEdit").addEventListener("click", () => {
+  document.location.href = "./slider-edit/index.html";
+});
