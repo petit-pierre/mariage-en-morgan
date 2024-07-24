@@ -142,15 +142,36 @@ nav {
 
 .photoVoiture {
   border-radius: 10px;
-  max-width: 49%;
+  width: 100%;
   min-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+  cursor: pointer;
 }
 @media (max-width: 767.98px) {
   .photoVoiture {
     max-width: 100%;
   }
+}
+
+.unePhoto {
+  position: relative;
+  max-width: 49%;
+  min-height: 300px;
+}
+
+.unePhoto2 {
+  position: relative;
+  max-width: 32%;
+  height: 195px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.unePhoto2 button {
+  background-color: transparent;
+  border: none;
 }
 
 .liens {
@@ -161,9 +182,15 @@ nav {
 .photo {
   width: 60%;
   padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
+}
+.photo button {
+  background: transparent;
+  border: none;
+  cursor: default;
 }
 .firstPic {
   width: 100%;
@@ -296,10 +323,9 @@ h1, h2, h3, H4 {
 }
 
 .photoVoiture2 {
-  width: 32%;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  max-height: 250px;
+  margin-top: -10%;
+  min-width: 100%;
+  max-width: 120%;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
@@ -462,6 +488,12 @@ input {
   }
   .photo {
     width: 100%;
+  }
+  .unePhoto {
+    max-width: 100%;
+  }
+  .unePhoto2 {
+    max-width: 100%;
   }
 }
 .connexion {
