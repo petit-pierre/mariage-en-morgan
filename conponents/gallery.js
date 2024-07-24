@@ -19,7 +19,7 @@ async function getItems() {
   collection.sort(function (a, b) {
     return a.french_content - b.french_content;
   });
-  console.log(collection);
+  //console.log(collection);
   if (collection.length > 8) {
     document.querySelector(".upload").classList.add("hidden");
   }
@@ -49,6 +49,12 @@ async function getItems() {
     arrow_right.classList.add("arrow_right");
     arrow_right.setAttribute("src", "../logos/arrow_right.png");
     document.querySelector(".item" + [i]).appendChild(arrow_right);
+    if (collection.length < 4) {
+      if (collection.length !== 0) {
+        console.log(collection.length);
+        document.querySelector(".trash" + i).classList.add("hidden");
+      }
+    }
   }
   if (document.querySelector(".arrow_left") !== null) {
     document.querySelector(".arrow_left").classList.add("hidden");

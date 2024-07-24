@@ -20,6 +20,17 @@
   }
 }
 
+.logOut {
+  height: 65px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: flex;
+}
+.logOut img {
+  height: 100%;
+}
+
 .modale {
   position: fixed;
   width: 100%;

@@ -3,7 +3,8 @@
   flex-direction: column;
 }
 .sliderEdit a img {
-  width: 25px;
+  margin: 10px;
+  width: 45px;
 }
 .sliderEdit .headerSlide {
   width: 100%;

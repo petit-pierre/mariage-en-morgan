@@ -29,7 +29,7 @@
     <script src="./conponents/smtp.js" defer></script>
     <script src="./conponents/slider.js" defer></script>
     <script src="./conponents/pictureClick.js" defer></script>
-    <script src="./conponents/getItems.js" defer></script>
+    <script src="./conponents/connect.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
@@ -59,17 +59,11 @@
     </div>
     <div class="body">
     <div class="main-container" id="Home">
-        <div id="banner">
-            <img class="banner-img b0" src="./photos_voiture/slider/pic01.jpg" alt="Banner picture 1">
-            <img class="banner-img b1" src="./photos_voiture/slider/pic02.jpg" alt="Banner picture 2">
-            <img class="banner-img b2" src="./photos_voiture/slider/pic03.jpg" alt="Banner picture 3">
-            <img class="banner-img b3" src="./photos_voiture/slider/pic04.jpg" alt="Banner picture 4">
-            <img class="banner-img b4" src="./photos_voiture/slider/pic05.jpg" alt="Banner picture 5">
-            <img class="banner-img b5" src="./photos_voiture/slider/pic06.jpg" alt="Banner picture 6">
-            <img class="banner-img b6" src="./photos_voiture/slider/pic07.jpg" alt="Banner picture 7">
+        <div id="banner" class="slider">
+
             <img src="./logos/arrow_left.png" class="arrow_left arrow" alt="logo arrow left">
             <img src="./logos/arrow_right.png" class="arrow_right arrow" alt="logo arrow right">
-            <button><img src="./logos/plume.png" class="plume sliderEdit" alt="logo plume"></button>
+            <button><img src="./logos/plume.png" class="plume sliderEdit hidden" alt="logo plume"></button>
             <div class="dots">
             </div>
         </div>
@@ -84,6 +78,7 @@
                 <a class="navlogo" href="#contact"><img title="Contact" class="img" src="./logos/telephone(1).png" alt="logo phone"></a>
                 <a class="navlogo" href="https://www.facebook.com/MORGAN02022020" target="_blank" ><img class="logoFacebook" title="Facebook" src="./logos/logo-facebook-noir.png" alt="logo facebook"></a>
                 <a class="navlogo" href="https://www.mariages.net/voiture-mariage/antoine-aubree--e299370"target="_blank"><img class="logoFacebook" src="./logos/logo-website-file-globe-icon-svg-wikimedia-commons-21.png" alt="logo website"></a>
+                <button class="navlogo logOut hidden" ><img class="logoLogOut" src="./logos/logout.png" alt="logo log out"></button>
             </nav>
         </aside>
           <div class="main">
@@ -124,7 +119,7 @@
                       <p>Morgan continue de façonner des voitures de sport et de prestige .</p>
                       <div class="pictureContainer">
                       <img src="./photos_voiture/gallery/pic01.jpg" class="firstPic photo4" alt="car big picture">
-                      <button><img src="./logos/plume.png" class="plume" alt="logo plume"></button></div>
+                      <button><img src="./logos/plume.png" class="plume" alt="logo plume hidden"></button></div>
                   </section>
                   <section class="photo__photo">
                       <img class="photoVoiture2 photo5" src="./photos_voiture/gallery/pic02.jpg" alt="car picture 5">
