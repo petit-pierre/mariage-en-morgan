@@ -20,6 +20,20 @@
   }
 }
 
+.uploadFullPic {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.fullPic {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+}
+
 .logOut {
   height: 65px;
   cursor: pointer;
