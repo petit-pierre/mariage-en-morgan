@@ -1,10 +1,15 @@
+const token = window.localStorage.getItem("token");
+if (token === null) {
+  document.location.href = "../index.html";
+}
+
 async function getItems() {
   const response = await fetch("https://api.petitpierre.net/api/sliders", {
     method: "GET",
   });
 
   let result = await response.json();
-  const token = window.localStorage.getItem("token");
+
   let collection = [];
   for (let i = 0; i < result.length; i++) {
     if (result[i].alt === "slider") {
@@ -49,8 +54,9 @@ async function getItems() {
     document.querySelector(".arrow_left").classList.add("hidden");
   }
   let count = collection.length - 1;
-
-  document.querySelector(".arrow_right" + count).classList.add("hidden");
+  if (document.querySelector(".arrow_right") !== null) {
+    document.querySelector(".arrow_right" + count).classList.add("hidden");
+  }
 
   document.querySelector(".upload").addEventListener("change", (event) => {
     if (document.querySelector(".upload").value !== "") {
@@ -113,6 +119,8 @@ async function getItems() {
     await sendItems(slide, token);
   }
   trash(collection, token);
+  moveLeft(collection, token);
+  moveRight(collection, token);
 }
 getItems();
 
@@ -147,7 +155,7 @@ async function deletteSlide(slideId, token) {
   document.location.href = "./index.html";
 }
 
-async function removeSlide(newslideId, token, newslide) {
+async function removeSlide(newslideId, token, newslide, refresh) {
   const response = await fetch(
     "https://api.petitpierre.net/api/sliders/" + newslideId,
     {
@@ -159,10 +167,10 @@ async function removeSlide(newslideId, token, newslide) {
     }
   );
   let result = await response.json();
-  sendSlide(newslide, token);
+  sendSlide(newslide, token, refresh);
 }
 
-async function sendSlide(newslide, token) {
+async function sendSlide(newslide, token, refresh) {
   const response = await fetch("https://api.petitpierre.net/api/sliders", {
     method: "POST",
 
@@ -176,6 +184,9 @@ async function sendSlide(newslide, token) {
 
   let result = await response.json();
   //console.log(result);
+  if (refresh === 1) {
+    document.location.href = "./index.html";
+  }
   return result;
 }
 
@@ -232,5 +243,67 @@ function trash(collection, token) {
       delettePic(id, token, slideId);
       //delettePic(id, token, slideId);
     });
+  }
+}
+
+function moveLeft(collection, token) {
+  for (let i = 1; i < collection.length; i++) {
+    document
+      .querySelector(".arrow_left" + i)
+      .addEventListener("click", (evt) => {
+        const modifiedSlide = collection.find(
+          (obj) => obj.french_content === evt.target.classList[0].slice(10)
+        );
+        /*const previousSlide = collection.find(
+            (obj) => obj.french_content === evt.target.classList[0].slice(10) - 1
+            );*/
+        const previousSlide =
+          collection[
+            collection.findIndex((obj) => obj._id === modifiedSlide._id) - 1
+          ];
+        modifiedSlide.french_content = modifiedSlide.french_content - 1;
+        previousSlide.french_content =
+          parseInt(previousSlide.french_content) + 1;
+        let newslide = modifiedSlide;
+        let newslideId = modifiedSlide._id;
+        removeSlide(newslideId, token, newslide);
+        newslide = previousSlide;
+        newslideId = previousSlide._id;
+        let refresh = 1;
+        removeSlide(newslideId, token, newslide, refresh);
+      });
+  }
+}
+
+function moveRight(collection, token) {
+  for (let i = 0; i < collection.length - 1; i++) {
+    document
+      .querySelector(".arrow_right" + i)
+      .addEventListener("click", (evt) => {
+        const modifiedSlide = collection.find(
+          (obj) =>
+            parseInt(obj.french_content) ===
+            parseInt(evt.target.classList[0].slice(11))
+        );
+        /*const previousSlide = collection.find(
+              (obj) => obj.french_content === evt.target.classList[0].slice(10) - 1
+              );*/
+        console.log(modifiedSlide);
+        const nextSlide =
+          collection[
+            collection.findIndex((obj) => obj._id === modifiedSlide._id) + 1
+          ];
+        console.log(nextSlide);
+        modifiedSlide.french_content =
+          parseInt(modifiedSlide.french_content) + 1;
+        nextSlide.french_content = parseInt(nextSlide.french_content) - 1;
+        let newslide = modifiedSlide;
+        let newslideId = modifiedSlide._id;
+        removeSlide(newslideId, token, newslide);
+        newslide = nextSlide;
+        newslideId = nextSlide._id;
+        let refresh = 1;
+        removeSlide(newslideId, token, newslide, refresh);
+      });
   }
 }

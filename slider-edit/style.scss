@@ -1,6 +1,12 @@
 .sliderEdit{
     display: flex;
     flex-direction: column;
+    a{
+        img{
+            width: 25px;
+        }
+
+    }
     .headerSlide{
         width: 100%;
         display: flex;
@@ -11,8 +17,22 @@
             opacity: 0;
         }
     }
+    input[type=file]::file-selector-button{
+        display: none;
+      }
     .upload{
         margin: auto;
+        width: 200px;
+        text-align: center;
+        cursor: pointer;
+        //color: red;
+        //border: solid 2px black;
+    }
+    .upload:hover{
+        font-size: 0.86rem;
+        width: 205px;
+        box-shadow: 2px 6px 2px black; 
+        transition: 1s;
     }
     .collection{
         display: flex;

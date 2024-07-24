@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
 }
+.sliderEdit a img {
+  width: 25px;
+}
 .sliderEdit .headerSlide {
   width: 100%;
   display: flex;
@@ -12,8 +15,20 @@
   z-index: -1;
   opacity: 0;
 }
+.sliderEdit input[type=file]::file-selector-button {
+  display: none;
+}
 .sliderEdit .upload {
   margin: auto;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+.sliderEdit .upload:hover {
+  font-size: 0.86rem;
+  width: 205px;
+  box-shadow: 2px 6px 2px black;
+  transition: 1s;
 }
 .sliderEdit .collection {
   display: flex;
