@@ -317,6 +317,11 @@ h1, h2, h3, H4 {
   position: absolute;
 }
 
+.btn4 {
+  background-color: transparent;
+  border: none;
+}
+
 .photo__photo {
   width: 100%;
   display: flex;
