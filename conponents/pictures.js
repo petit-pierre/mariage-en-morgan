@@ -31,8 +31,8 @@ async function getItems() {
   secondCollection.sort(function (a, b) {
     return a.french_content - b.french_content;
   });
-
-  putFullPic(fullPic);
+  changePic(firstCollection, token);
+  //putFullPic(fullPic);
 }
 getItems();
 
@@ -116,5 +116,18 @@ async function putFullPic(fullPic) {
       let result = await response.json();
       document.location.href = "./index.html";
     }
+  });
+}
+
+async function changePic(firstCollection, token) {
+  let wichPic;
+  for (let i = 0; i < 13; i++) {
+    document.querySelector(".btn" + i).addEventListener("click", (evt) => {
+      wichPic = i;
+      document.querySelector(".uploadFullPic").click();
+    });
+  }
+  document.querySelector(".uploadFullPic").addEventListener("change", (evt) => {
+    console.log(wichPic);
   });
 }

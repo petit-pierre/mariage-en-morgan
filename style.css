@@ -311,6 +311,12 @@ h1, h2, h3, H4 {
   font-size: 24px;
 }
 
+.up {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
 .photo__photo {
   width: 100%;
   display: flex;
